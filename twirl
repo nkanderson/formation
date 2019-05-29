@@ -578,7 +578,7 @@ install_application_via_app_store() {
 install_npm_packages() {
 	if [[ $(cli_is_installed $2) == 0 ]]; then
 		echo_install "Installing $1"
-		npm install $1 -g --silent
+		$HOME/.nvm/versions/node/v12.3.1/bin/npm install $1 -g --silent
 		print_in_green "${bold}✓ installed!${normal}\n"
 	else
 		print_success_muted "$1 already installed. Skipped."
